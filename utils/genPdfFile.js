@@ -60,7 +60,7 @@ async function generatePDFFromHTML(htmlString) {
             top: '60px',
             bottom: '20px',
             left: '20px',
-            right: '30px'
+            right: '50px'
         },
 
     };
