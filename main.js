@@ -7,8 +7,6 @@ const port = args[0] || 10030;
 const bodyParser = require('body-parser');
 const multer = require('multer');
 
-app.use(bodyParser.json({limit: '20mb'}));
-app.use(bodyParser.urlencoded({limit: '20mb', extended: true, parameterLimit: 50000,}));
 app.use(express.text({limit: '20mb'})); // 用于解析请求体中的文本
 
 const storage = multer.memoryStorage();
@@ -32,7 +30,6 @@ app.post('/htmlfile-to-pdf', upload.single('file'), async (req, res) => {
 });
 app.post('/html-to-pdf', async (req, res) => {
   try {
-    console.log(req.body)
       // 设置响应头
       res.setHeader('Content-Type', 'application/pdf');
       res.setHeader('Content-Disposition', 'attachment; filename=document.pdf');

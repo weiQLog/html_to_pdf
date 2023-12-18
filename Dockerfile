@@ -1,4 +1,4 @@
-FROM node:18
+FROM ghcr.io/puppeteer/puppeteer:latest
 
 MAINTAINER weiqlog@126.com
 
