@@ -7,8 +7,13 @@ let browserInstance;
 async function getBrowserInstance() {
     if (!browserInstance) {
         browserInstance = await puppeteer.launch({
-            headless: "new" // 明确使用新的无头模式
-            // 配置项（如果有的话）
+            headless: "new", // 明确使用新的无头模式
+            args: [
+                "--disable-gpu",
+                "--disable-dev-shm-usage",
+                "--disable-setuid-sandbox",
+                "--no-sandbox",
+            ]
         });
     }
     return browserInstance;

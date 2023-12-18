@@ -5,6 +5,7 @@ const app = express();
 const args = process.argv.slice(2);
 const port = args[0] || 10030;
 const bodyParser = require('body-parser');
+const multer = require('multer');
 
 app.use(bodyParser.json({limit: '20mb'}));
 app.use(bodyParser.urlencoded({limit: '20mb', extended: true, parameterLimit: 50000,}));

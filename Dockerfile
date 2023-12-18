@@ -1,4 +1,4 @@
-FROM node:18.8.2
+FROM node:18
 
 MAINTAINER weiqlog@126.com
 
