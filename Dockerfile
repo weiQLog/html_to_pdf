@@ -2,15 +2,17 @@ FROM ghcr.io/puppeteer/puppeteer:latest
 
 MAINTAINER weiqlog@126.com
 
+USER root
+
 RUN mkdir -p /pdfG
 
 WORKDIR /pdfG
 
 COPY package*.json ./
 
-RUN npm instal
-
 COPY . .
+
+RUN npm instal
 
 EXPOSE 10030
 
