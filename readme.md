@@ -1,5 +1,4 @@
 # 使用说明书
-源代码：http://gitlab.saas123.com/weiqlog/pdfg_node.git
 ## 1.概述
 该服务提供了两个接口，允许用户将 HTML 文本或 HTML 文件转换为 PDF 文件。服务监听在指定的端口上（默认为 10030）。
 ## pull
